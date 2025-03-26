@@ -36,3 +36,8 @@ h3{
   display: flex;
   gap: 10px;
 }
+
+.filters{
+  display: flex;
+  justify-content: space-between;
+}
