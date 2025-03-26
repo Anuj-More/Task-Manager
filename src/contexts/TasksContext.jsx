@@ -37,11 +37,10 @@ const tasksReducer = (tasks, action) => {
             )
 
         case 'added': 
-            let nextId = tasks.length
             return [
                 ...tasks,
                 {
-                    id: nextId++,
+                    id: crypto.randomUUID(),
                     text: action.text,
                     done: false
                 }
