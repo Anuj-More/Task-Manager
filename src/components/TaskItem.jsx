@@ -72,10 +72,12 @@ const TaskItem = ({ task }) => {
         </button>
         <button
           onClick={() => {
-            dispatch({
-              type: 'deleted',
-              id: task.id
-            })
+            if(window.confirm("Are you sure you want to delete this task?")){
+              dispatch({
+                type: 'deleted',
+                id: task.id
+              })
+            }
           }}
         >
           Delete
